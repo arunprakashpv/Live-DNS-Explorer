@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Live DNS Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="assets/images/dns-toolkit-icon.svg">
+  <link rel="icon" type="image/png" href="assets/images/dns-toolkit-icon.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ4RNZFD3T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QZ4RNZFD3T');
+  </script>
+
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "xz9ci9brb8");
+  </script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link">Explorer</a>
+        <a href="about.html" class="nav-link active">About</a>
+      </nav>
+      <div class="logo">
+        <img src="assets/images/dns-toolkit-icon.svg" alt="DNS Toolkit Icon" class="logo-icon">
+        <h1>Live DNS Explorer</h1>
+      </div>
+      <p>Query real DNS from your browser using DNS-over-HTTPS APIs.</p>
+    </header>
+
+    <main class="simulator-card">
+      <div class="about-content">
+        <h2>What is Live DNS Explorer?</h2>
+        <p>Live DNS Explorer is a fast, entirely client-side web application designed to help developers, sysadmins, and curious minds query the Domain Name System (DNS) in real-time. It mimics the experience of a terminal utility while providing a beautiful and responsive user interface.</p>
+        
+        <h2>How does it work?</h2>
+        <p>Unlike traditional DNS tools that run locally or require backend servers to proxy your requests, Live DNS Explorer runs entirely in your web browser. It achieves this by using <strong>DNS-over-HTTPS (DoH)</strong>.</p>
+        <p>DoH is a protocol that performs remote DNS resolution over the standard secure HTTPS protocol (port 443). The application formats your lookup request and sends it securely to public DNS resolvers equipped with RESTful DoH endpoints, such as:</p>
+        <ul>
+          <li><strong>Cloudflare (1.1.1.1):</strong> Known for its privacy-first approach and extreme speeds.</li>
+          <li><strong>Google (8.8.8.8):</strong> A highly reliable and globally distributed public DNS service.</li>
+        </ul>
+        <p>Once the resolver looks up the domain records across the global DNS network, it sends the response back to your browser as a JSON payload. Live DNS Explorer then parses this JSON and presents it beautifully in the simulated terminal.</p>
+
+        <h2>Supported Record Types</h2>
+        <p>The tool allows you to query various standard DNS record types to inspect the health and routing of a domain:</p>
+        <ul>
+          <li><strong>A (IPv4 Address):</strong> Maps a domain to its physical IPv4 address.</li>
+          <li><strong>AAAA (IPv6 Address):</strong> Maps a domain to its physical IPv6 address.</li>
+          <li><strong>CNAME (Canonical Name):</strong> Aliases one domain name to another.</li>
+          <li><strong>MX (Mail Exchange):</strong> Directs emails to the correct mail server for a domain.</li>
+          <li><strong>TXT (Text):</strong> Holds arbitrary text, heavily used for email verification (SPF, DKIM, DMARC) and domain ownership checks.</li>
+          <li><strong>NS (Name Server):</strong> Indicates which DNS servers are authoritative for the domain.</li>
+          <li><strong>SOA (Start of Authority):</strong> Contains administrative information about the DNS zone, such as the primary nameserver and TTLs.</li>
+          <li><strong>PTR (Pointer):</strong> Used for reverse DNS lookups (resolving an IP address back to a hostname).</li>
+        </ul>
+        
+        <h2>Privacy</h2>
+        <p>Because the app communicates directly with Cloudflare and Google from your browser, no DNS query data is ever sent to or logged by the creator of this tool. Your traffic remains between your device and the chosen resolver.</p>
+      </div>
+    </main>
+    
+    <footer class="app-footer">
+      <p>&copy; 2026 Arun Prakash P V. Crafted with precision.</p>
+      <p class="footer-privacy" style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-secondary);">
+        This site uses
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Google Analytics</a>
+        and
+        <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Microsoft Clarity</a>
+        to understand traffic and improve the experience. No personal data is collected.
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

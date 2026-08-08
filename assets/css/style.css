@@ -52,6 +52,36 @@ body {
   animation: fadeInDown 0.6s ease-out;
 }
 
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.nav-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  border-radius: 2rem;
+  transition: all 0.2s ease;
+  background: transparent;
+  border: 1px solid transparent;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.nav-link.active {
+  color: var(--text-primary);
+  background: rgba(59, 130, 246, 0.15);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -294,6 +324,45 @@ button#lookup-btn:active {
   color: var(--text-secondary);
   font-size: 0.85rem;
   animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+/* About Page Content */
+.about-content {
+  color: #a8b1bd;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+  padding-right: 1rem;
+}
+
+.about-content h2 {
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-content h2:first-child {
+  margin-top: 0;
+}
+
+.about-content p {
+  margin-bottom: 1rem;
+}
+
+.about-content ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-content li {
+  margin-bottom: 0.5rem;
+}
+
+.about-content strong {
+  color: var(--accent);
 }
 
 /* Animations */
