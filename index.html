@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live DNS Explorer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QZ4RNZFD3T"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QZ4RNZFD3T');
+  </script>
+
+  <script type="text/javascript">
+      (function(c,l,a,r,i,t,y){
+          c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+          t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+          y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+      })(window, document, "clarity", "script", "xz9ci9brb8");
+  </script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo">
+        <img src="assets/images/dns-toolkit-icon.svg" alt="DNS Toolkit Icon" class="logo-icon">
+        <h1>Live DNS Explorer</h1>
+      </div>
+      <p>Query real DNS from your browser using DNS-over-HTTPS APIs.</p>
+    </header>
+
+    <main class="simulator-card">
+      <div class="controls-row">
+        <div class="input-group domain-group">
+          <label for="sim-domain">Domain Name</label>
+          <input type="text" id="sim-domain" value="google.com" placeholder="e.g., example.com">
+        </div>
+        
+        <div class="input-group type-group">
+          <label for="sim-type">Record Type</label>
+          <select id="sim-type">
+            <option value="A">A (IPv4)</option>
+            <option value="AAAA">AAAA (IPv6)</option>
+            <option value="CNAME">CNAME</option>
+            <option value="MX">MX (Email)</option>
+            <option value="TXT">TXT (Text)</option>
+            <option value="NS">NS (Nameserver)</option>
+            <option value="SOA">SOA (Authority)</option>
+            <option value="PTR">PTR (Pointer)</option>
+          </select>
+        </div>
+
+        <div class="input-group resolver-group">
+          <label for="sim-resolver">Resolver</label>
+          <select id="sim-resolver">
+            <option value="google">Google (8.8.8.8)</option>
+            <option value="cloudflare">Cloudflare (1.1.1.1)</option>
+          </select>
+        </div>
+
+        <div class="input-group button-group">
+          <label class="invisible">Action</label>
+          <button id="lookup-btn">Lookup</button>
+        </div>
+      </div>
+
+      <div class="quick-actions">
+        <span class="quick-label">Try:</span>
+        <button class="quick-btn" data-domain="github.com" data-type="A">github.com A</button>
+        <button class="quick-btn" data-domain="google.com" data-type="MX">google.com MX</button>
+        <button class="quick-btn" data-domain="cloudflare.com" data-type="TXT">cloudflare.com TXT</button>
+        <button class="quick-btn" data-domain="this-does-not-exist.com" data-type="A">NXDOMAIN</button>
+      </div>
+
+      <div class="result-container">
+        <div class="result-header">
+          <div class="dots-group">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <span class="terminal-title">Terminal</span>
+          <div class="action-group">
+            <button id="copy-btn" class="copy-btn">Copy</button>
+          </div>
+        </div>
+        <div id="sim-result" class="result-body">Enter a domain and click Lookup to see the results here.</div>
+      </div>
+    </main>
+    
+    <footer class="app-footer">
+      <p>&copy; 2026 Arun Prakash P V. Crafted with precision.</p>
+      <p class="footer-privacy" style="margin-top: 0.5rem; font-size: 0.75rem; color: var(--text-secondary);">
+        This site uses
+        <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Google Analytics</a>
+        and
+        <a href="https://privacy.microsoft.com/privacystatement" target="_blank" rel="noopener noreferrer" style="color: var(--accent); text-decoration: none;">Microsoft Clarity</a>
+        to understand traffic and improve the experience. No personal data is collected.
+      </p>
+    </footer>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

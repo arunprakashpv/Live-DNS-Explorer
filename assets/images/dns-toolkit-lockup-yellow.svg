@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 520 140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DNS Tool Kit">
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0079C1"/>
+      <stop offset="1" stop-color="#00A05A"/>
+    </linearGradient>
+    <radialGradient id="vig" cx="0.5" cy="0.5" r="0.72">
+      <stop offset="0.45" stop-color="#021A20" stop-opacity="0"/>
+      <stop offset="1" stop-color="#021A20" stop-opacity="0.34"/>
+    </radialGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.16"/>
+      <stop offset="0.5" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.4"/>
+    </filter>
+    <filter id="shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#04122A" flood-opacity="0.42"/>
+    </filter>
+    <style type="text/css"><![CDATA[
+      .dns-sub { font-family: 'Zoho Puvi','Puvi','Inter','Segoe UI',sans-serif; font-weight: 500; letter-spacing: 2px; }
+      .dns-title { font-family: 'Zoho Puvi','Puvi','Inter','Segoe UI',sans-serif; font-weight: 700; letter-spacing: -0.5px; }
+    ]]></style>
+  </defs>
+  <rect width="520" height="140" fill="#FFD70F"/>
+  <g filter="url(#shadow)">
+    <rect x="20" y="20" width="100" height="100" rx="27" fill="url(#tile)"/>
+    <rect x="20" y="20" width="100" height="100" rx="27" fill="url(#vig)"/>
+    <rect x="20" y="20" width="100" height="100" rx="27" fill="url(#sheen)"/>
+    <rect x="21.5" y="21.5" width="97" height="97" rx="25.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="1.2"/>
+  </g>
+  <g>
+<circle cx="51" cy="83" r="8.5" fill="#C82332" filter="url(#glow)" opacity="0.6"/><circle cx="70" cy="86" r="8.5" fill="#00A05A" filter="url(#glow)" opacity="0.6"/><circle cx="89" cy="83" r="8.5" fill="#FAAA1E" filter="url(#glow)" opacity="0.6"/><circle cx="70" cy="56" r="9" fill="#CFE7FF" filter="url(#glow)" opacity="0.5"/>
+    <polygon points="70.00,39.00 96.85,54.50 96.85,85.50 70.00,101.00 43.15,85.50 43.15,54.50" fill="none" stroke="#FFFFFF" stroke-width="3.2" stroke-linejoin="round" stroke-opacity="0.96"/>
+    <line x1="70" y1="56" x2="51" y2="83" stroke="#FFFFFF" stroke-opacity="0.82" stroke-width="2.4" stroke-linecap="round"/><line x1="70" y1="56" x2="70" y2="86" stroke="#FFFFFF" stroke-opacity="0.82" stroke-width="2.4" stroke-linecap="round"/><line x1="70" y1="56" x2="89" y2="83" stroke="#FFFFFF" stroke-opacity="0.82" stroke-width="2.4" stroke-linecap="round"/>
+    <circle cx="51" cy="83" r="5.6" fill="#C82332" stroke="#FFFFFF" stroke-width="1.8"/><circle cx="70" cy="86" r="5.6" fill="#00A05A" stroke="#FFFFFF" stroke-width="1.8"/><circle cx="89" cy="83" r="5.6" fill="#FAAA1E" stroke="#FFFFFF" stroke-width="1.8"/><circle cx="70" cy="56" r="6.2" fill="#FFFFFF" stroke="#0079C1" stroke-width="2"/>
+  </g>
+  <text x="145" y="55" class="dns-sub" font-size="13" fill="#6B5200">arunprakashpv</text>
+  <text x="145" y="105" class="dns-title" font-size="42" fill="#0F172A">DNS Tool Kit</text>
+</svg>
